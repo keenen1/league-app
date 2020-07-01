@@ -6,6 +6,7 @@ import Start from './Start'
 import Login from './Login'
 import SignUp from './Signup'
 import CreateTeam from './CreateTeam'
+import DisplayLeague from './DisplayLeagues'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/create/team" component={CreateTeam} />
+        <Route path="/leagues" component={DisplayLeague} />
       </Router>
     </>
   )
