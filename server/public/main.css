@@ -1,6 +1,8 @@
 body {
   background-color: beige;
   text-align: center;
+  /* font-family: 'MuseoModerno', cursive; */
+  font-family: 'Quicksand', sans-serif;
 }
 
 ul li {
@@ -10,4 +12,21 @@ ul li {
 table {
   text-align: left;
   margin: auto;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  width: 35%;
+  font-size: 25px;
+}
+
+table, thead, td {
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+.td-name {
+  text-align: left;
 }
