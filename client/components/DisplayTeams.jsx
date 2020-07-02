@@ -1,11 +1,35 @@
 import React from 'react'
 
-const DisplayTeams = () => {
-  return (
-    <>
-      {/* Display List of Teams */}
-    </>
-  )
+import { getTeams } from '../api/api-teams'
+
+class DisplayTeams extends React.Component {
+  state = {
+    teams: []
+  }
+
+  componentDidMount () {
+    getTeams()
+      .then(teamsArr => {
+        this.setState({
+          teams: teamsArr
+        })
+      })
+  }
+
+  render () {
+    return (
+      <>
+        <h1>Teams</h1>
+        <ul>
+          {this.state.teams.map(team => {
+            return <li key={team.id}>
+              {team.name}
+            </li>
+          })}
+        </ul>
+      </>
+    )
+  }
 }
 
 export default DisplayTeams

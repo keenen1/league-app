@@ -6,6 +6,9 @@ import Start from './Start'
 import Login from './Login'
 import SignUp from './Signup'
 import CreateTeam from './CreateTeam'
+import DisplayLeagues from './DisplayLeagues'
+import DisplayTeams from './DisplayTeams'
+import DisplayPlayers from './DisplayPlayers'
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/create/team" component={CreateTeam} />
+        <Route path="/leagues" component={DisplayLeagues} />
+        <Route path="/teams" component={DisplayTeams} />
+        <Route path="/players" component={DisplayPlayers} />
       </Router>
     </>
   )
