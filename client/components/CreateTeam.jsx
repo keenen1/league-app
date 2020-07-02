@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class CreateTeam extends React.Component {
+class CreateTeam extends React.Component {
   render () {
     return (
       <>
@@ -16,3 +16,5 @@ export default class CreateTeam extends React.Component {
     )
   }
 }
+
+export default CreateTeam
