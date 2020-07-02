@@ -7,7 +7,7 @@ const db = require('../db/db')
 router.get('/', (req, res) => {
   db.getLeagues()
     .then(leagues => {
-      res.send(leagues)
+      res.json(leagues)
     })
     .catch(err => res.status(500).send(err.message))
 })

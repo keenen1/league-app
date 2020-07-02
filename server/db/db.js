@@ -5,7 +5,8 @@ const connection = require('knex')(config)
 module.exports = {
   getLeagues,
   saveNewLeague,
-  getTeams
+  getTeams,
+  getPlayers
 }
 
 function getLeagues (db = connection) {
@@ -21,4 +22,8 @@ function saveNewLeague (name, db = connection) {
 
 function getTeams (db = connection) {
   return db('teams').select()
+}
+
+function getPlayers (db = connection) {
+  return db('players').select()
 }

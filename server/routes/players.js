@@ -5,9 +5,9 @@ const db = require('../db/db')
 
 // retreive all teams
 router.get('/', (req, res) => {
-  db.getTeams()
-    .then(teams => {
-      res.json(teams)
+  db.getPlayers()
+    .then(players => {
+      res.json(players)
     })
     .catch(err => res.status(500).send(err.message))
 })
