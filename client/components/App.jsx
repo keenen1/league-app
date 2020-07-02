@@ -1,7 +1,6 @@
 import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
-// import TopPanel from './TopPanel'
 import Start from './Start'
 import Login from './Login'
 import SignUp from './Signup'
