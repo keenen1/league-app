@@ -6,7 +6,8 @@ module.exports = {
   getLeagues,
   saveNewLeague,
   getTeams,
-  getPlayers
+  getPlayers,
+  getTeamPlayers
 }
 
 function getLeagues (db = connection) {
@@ -26,4 +27,10 @@ function getTeams (db = connection) {
 
 function getPlayers (db = connection) {
   return db('players').select()
+}
+
+function getTeamPlayers (teamId, db = connection) {
+  return db('players')
+    .join('teams', 'teams.id', 'players.team_id')
+    .select('teams.name as teamname', 'players.firstname', 'players.surname', 'players.number', 'players.isCaptain')
 }
