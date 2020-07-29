@@ -4,7 +4,7 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex('teams').insert([
-        { id: 1, name: 'Warrios', league_id: 3 },
+        { id: 1, name: 'Warriors', league_id: 3 },
         { id: 2, name: 'Raptors', league_id: 3 },
         { id: 3, name: 'Lakers', league_id: 3 }
       ])
