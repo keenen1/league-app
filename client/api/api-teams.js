@@ -14,3 +14,10 @@ export function retreiveTeam (team) {
     .send(team)
     .then(res => res.body)
 }
+
+// export function retreiveTeamPlayers (team) {
+//   return request
+//     .post(teamURL)
+//     .send(team)
+//     .then(res => res.body)
+// }
