@@ -3,17 +3,19 @@ import React from 'react'
 import { getTeamPlayers } from '../api/api-teams'
 
 class TeamPlayers extends React.Component {
-  // constructor (props) {
-  //   super(props)
-  // }
-  state = {
-    teamname: '',
-    teamPlayers: []
+  constructor (props) {
+    super(props)
+    this.state = {
+      teamname: '',
+      teamId: this.props.teamid,
+      teamPlayers: []
+    }
   }
 
   componentDidMount () {
     getTeamPlayers(1)
       .then(teamsArr => {
+        // console.log(this.state.teamId)
         this.setState({
           teamname: teamsArr[0].teamname,
           teamPlayers: teamsArr
