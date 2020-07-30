@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getTeams } from '../api/api-teams'
 
-class DisplayTeams extends React.Component {
+class Teams extends React.Component {
   state = {
     teams: []
   }
@@ -32,4 +32,4 @@ class DisplayTeams extends React.Component {
   }
 }
 
-export default DisplayTeams
+export default Teams
