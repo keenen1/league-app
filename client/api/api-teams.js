@@ -8,14 +8,14 @@ export function getTeams () {
     .then(res => res.body)
 }
 
-export function retreiveTeam (team) {
+export function postTeam (team) {
   return request
     .post(teamURL)
     .send(team)
     .then(res => res.body)
 }
 
-export function retreiveTeamPlayers (teamId) {
+export function getTeamPlayers (teamId) {
   return request
     .get(teamURL + '/' + teamId)
     .then(res => res.body)

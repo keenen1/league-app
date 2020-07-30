@@ -5,9 +5,10 @@ import Start from './Start'
 import Login from './Login'
 import SignUp from './Signup'
 import CreateTeam from './CreateTeam'
-import DisplayLeagues from './DisplayLeagues'
-import DisplayTeams from './DisplayTeams'
-import DisplayPlayers from './DisplayPlayers'
+import Leagues from './Leagues'
+import Teams from './Teams'
+import Players from './Players'
+import TeamPlayers from './TeamPlayers'
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/create/team" component={CreateTeam} />
-        <Route path="/leagues" component={DisplayLeagues} />
-        <Route path="/teams" component={DisplayTeams} />
-        <Route path="/players" component={DisplayPlayers} />
+        <Route path="/leagues" component={Leagues} />
+        <Route path="/teams" component={Teams} />
+        <Route path="/players" component={Players} />
+        <Route exact path={`/teams/1`} component={TeamPlayers} />
       </Router>
     </>
   )
