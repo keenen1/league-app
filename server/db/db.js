@@ -33,5 +33,5 @@ function getTeamPlayers (teamId, db = connection) {
   return db('players')
     .join('teams', 'teams.id', 'players.team_id')
     .where('teams.id', teamId)
-    .select('teams.name as teamname', 'players.firstname', 'players.surname', 'players.number', 'players.isCaptain')
+    .select('players.id as id', 'teams.name as teamname', 'players.firstname', 'players.surname', 'players.number', 'players.isCaptain')
 }

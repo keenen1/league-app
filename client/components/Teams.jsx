@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { getTeams } from '../api/api-teams'
 
@@ -23,7 +24,9 @@ class Teams extends React.Component {
         <ul>
           {this.state.teams.map(team => {
             return <li key={team.id}>
-              {team.name}
+              <Link to={`/teams/${team.id}`}>
+                {team.name}
+              </Link>
             </li>
           })}
         </ul>
