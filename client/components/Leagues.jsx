@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getLeagues } from '../api/api-leagues'
 
-class DisplayLeagues extends React.Component {
+class Leagues extends React.Component {
   state = {
     leagues: []
   }
@@ -32,4 +32,4 @@ class DisplayLeagues extends React.Component {
   }
 }
 
-export default DisplayLeagues
+export default Leagues

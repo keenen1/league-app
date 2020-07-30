@@ -15,9 +15,8 @@ export function retreiveTeam (team) {
     .then(res => res.body)
 }
 
-// export function retreiveTeamPlayers (team) {
-//   return request
-//     .post(teamURL)
-//     .send(team)
-//     .then(res => res.body)
-// }
+export function retreiveTeamPlayers (teamId) {
+  return request
+    .get(teamURL + '/' + teamId)
+    .then(res => res.body)
+}

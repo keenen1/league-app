@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getPlayers } from '../api/api-players'
 
-class DisplayPlayers extends React.Component {
+class Players extends React.Component {
   state = {
     players: []
   }
@@ -45,4 +45,4 @@ class DisplayPlayers extends React.Component {
   }
 }
 
-export default DisplayPlayers
+export default Players
