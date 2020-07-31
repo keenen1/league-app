@@ -26,22 +26,22 @@ class TeamPlayers extends React.Component {
   render () {
     return (
       <>
+        <Link className="tp-goback" to="/teams">All Teams</Link>
         <h1>{this.state.teamname}</h1>
-        <Link className="tp-goback" to="/teams">Go Back</Link>
         <div className="table-div">
           <table>
             <thead>
               <tr>
-                <th>Player</th>
                 <th>Number</th>
+                <th>Player</th>
                 <th>Captain</th>
               </tr>
             </thead>
             <tbody>
               {this.state.teamPlayers.map(player => {
                 return <tr key={player.id}>
-                  <td className="td-name">{`${player.firstname} ${player.surname}`}</td>
                   <td>{player.number}</td>
+                  <td className="td-name">{`${player.firstname} ${player.surname}`}</td>
                   <td>{player.isCaptain ? `Yes` : ``}</td>
                 </tr>
               })}
