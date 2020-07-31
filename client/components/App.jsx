@@ -20,9 +20,9 @@ const App = () => {
         <Route path="/signup" component={SignUp} />
         <Route path="/create/team" component={CreateTeam} />
         <Route path="/leagues" component={Leagues} />
-        <Route path="/teams" component={Teams} />
+        <Route exact path="/teams" component={Teams} />
         <Route path="/players" component={Players} />
-        <Route exact path={`/teams/1`} component={TeamPlayers} />
+        <Route exact path={`/teams/:id`} component={TeamPlayers} />
       </Router>
     </>
   )

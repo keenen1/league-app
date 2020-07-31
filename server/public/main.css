@@ -30,3 +30,38 @@ td {
 .td-name {
   text-align: left;
 }
+
+.team-ul {
+  width: 500px;
+  display: flex;
+  margin: auto;
+  padding: 0;
+}
+
+.team-li {
+  border-radius: 15px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: cadetblue;
+  text-decoration: none;
+}
+.team-li:hover {
+  background-color: darkgoldenrod;
+}
+
+.tp-goback {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  background-color: cadetblue;
+  color: white;
+  text-decoration: none;
+}
+.tp-goback:hover {
+  background-color: darkgoldenrod;
+}
+.table-div {
+  margin-top: 30px;
+}
