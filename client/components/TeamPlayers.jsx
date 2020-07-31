@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { getTeamPlayers } from '../api/api-teams'
 
@@ -7,18 +8,17 @@ class TeamPlayers extends React.Component {
     super(props)
     this.state = {
       teamname: '',
-      teamId: this.props.teamid,
+      teamId: this.props.match.params.id,
       teamPlayers: []
     }
   }
 
   componentDidMount () {
-    getTeamPlayers(1)
-      .then(teamsArr => {
-        // console.log(this.state.teamId)
+    getTeamPlayers(this.state.teamId)
+      .then(playersArr => {
         this.setState({
-          teamname: teamsArr[0].teamname,
-          teamPlayers: teamsArr
+          teamname: playersArr[0].teamname,
+          teamPlayers: playersArr
         })
       })
   }
@@ -27,6 +27,7 @@ class TeamPlayers extends React.Component {
     return (
       <>
         <h1>{this.state.teamname}</h1>
+        <Link className="tp-goback" to="/teams">Go Back</Link>
         <div className="table-div">
           <table>
             <thead>

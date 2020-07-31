@@ -21,14 +21,13 @@ class Teams extends React.Component {
     return (
       <>
         <h1>Teams</h1>
-        <ul>
+        <ul className="team-ul">
           {this.state.teams.map(team => {
-            return <li key={team.id}>
-              <Link to={`/teams/${team.id}`}
-                teamid={team.id} >
+            return <Link className="team-li" to={`/teams/${team.id}`} key={team.id}>
+              <li>
                 {team.name}
-              </Link>
-            </li>
+              </li>
+            </Link>
           })}
         </ul>
       </>
