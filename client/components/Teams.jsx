@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { getTeams } from '../api/api-teams'
+import { getLeagueTeams } from '../api/api-leagues'
 
 class Teams extends React.Component {
-  state = {
-    teams: []
+  constructor (props) {
+    super(props)
+    this.state = {
+      league: this.props.match.params.id,
+      teams: []
+    }
   }
 
   componentDidMount () {
-    getTeams()
+    getLeagueTeams(this.state.league)
       .then(teamsArr => {
         this.setState({
           teams: teamsArr
@@ -20,12 +24,13 @@ class Teams extends React.Component {
   render () {
     return (
       <>
-        <h1>Teams</h1>
+        <Link className="tp-goback" to="/leagues">All Leagues</Link>
+        <h1>{this.state.league}</h1>
         <ul className="team-ul">
           {this.state.teams.map(team => {
             return <Link className="team-li" to={`/teams/${team.id}`} key={team.id}>
               <li>
-                {team.name}
+                {team.teamname}
               </li>
             </Link>
           })}
