@@ -17,7 +17,6 @@ router.get('/:teamId', (req, res) => {
   const { teamId } = req.params
   db.getTeamPlayers(teamId)
     .then(teams => {
-      console.log('Router:', teams)
       res.json(teams)
     })
     .catch(err => res.status(500).send(err.message))

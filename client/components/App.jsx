@@ -19,10 +19,10 @@ const App = () => {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={SignUp} />
         <Route path="/create/team" component={CreateTeam} />
-        <Route path="/leagues" component={Leagues} />
-        <Route exact path="/teams" component={Teams} />
+        <Route exact path="/leagues" component={Leagues} />
+        <Route exact path="/leagues/:id" component={Teams} />
+        <Route exact path="/teams/:id" component={TeamPlayers} />
         <Route path="/players" component={Players} />
-        <Route exact path={`/teams/:id`} component={TeamPlayers} />
       </Router>
     </>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { getLeagues } from '../api/api-leagues'
+import { Link } from 'react-router-dom'
 
 class Leagues extends React.Component {
   state = {
@@ -20,11 +21,13 @@ class Leagues extends React.Component {
     return (
       <>
         <h1>Leagues</h1>
-        <ul>
+        <ul className="league-ul">
           {this.state.leagues.map(league => {
-            return <li key={league.id}>
-              {league.name}
-            </li>
+            return <Link key={league.id} to={`/leagues/${league.name}`}>
+              <li className="league-li">
+                {league.name}
+              </li>
+            </Link>
           })}
         </ul>
       </>
