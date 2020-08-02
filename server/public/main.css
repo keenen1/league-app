@@ -33,7 +33,7 @@ td {
   margin-top: 30px;
 }
 
-.team-ul {
+.team-ul, .league-ul {
   width: 500px;
   display: flex;
   flex-wrap: wrap;
@@ -41,8 +41,7 @@ td {
   margin: auto;
   padding: 0;
 }
-
-.team-li {
+.team-li, .league-li {
   width: 15%;
   height: 40px;
   border-radius: 15px;
@@ -53,27 +52,19 @@ td {
   background-color: cadetblue;
   text-decoration: none;
 }
-.league-ul {
-  width: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: auto;
-  padding: 0;
-}
-.league-li {
-  width: 30%;
+/* .league-li {
+  width: 40%;
   height: 40px;
   border-radius: 15px;
-  padding: 35px 40px 20px 20px;
   margin: auto;
+  padding: 35px 20px 20px 20px;
   text-align: center;
   color: white;
   background-color: cadetblue;
 }
 .league-ul a {
   text-decoration: none;
-}
+} */
 
 .team-li:hover, .league-li:hover {
   background-color: darkgoldenrod;
