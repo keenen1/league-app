@@ -1,5 +1,5 @@
 body {
-  background-color: beige;
+  background-color: grey;
   text-align: center;
   /* font-family: 'MuseoModerno', cursive; */
   font-family: 'Quicksand', sans-serif;
@@ -69,4 +69,27 @@ td {
 
 .table-div {
   margin-top: 30px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+}
+.score-team {
+  margin: 0px 20px;
+  background-color: white;
+  width: 200px;
+  font-size: 100px;
+  align-items: center;
+}
+.minus-buttons, .add-buttons {
+  font-size: 30px;
+  width: 30px;
+  height: 20px;
+  padding: 0px 10px;
+  flex-direction: column;
+}
+.team-a {
+  display: flex;
+  justify-content: center;
 }

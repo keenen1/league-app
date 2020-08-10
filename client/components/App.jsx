@@ -9,6 +9,7 @@ import Leagues from './Leagues'
 import Teams from './Teams'
 import Players from './Players'
 import TeamPlayers from './TeamPlayers'
+import ScoreBoard from './ScoreBoard'
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <Route exact path="/leagues/:id" component={Teams} />
         <Route exact path="/teams/:id" component={TeamPlayers} />
         <Route path="/players" component={Players} />
+
+        <Route exact path="/scoreboard" component={ScoreBoard} />
       </Router>
     </>
   )
