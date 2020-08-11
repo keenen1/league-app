@@ -86,11 +86,11 @@ class ScoreBoard extends React.Component {
               <div className="period">{this.state.currentPeriod}</div>
               <div className="period-buttons">
                 <button id="period-minus"
-                  onClick={this.changePeriod.bind(this, -1)}
-                  disabled={this.state.toDisableBack ? 1 : 0 }>Back</button>
+                  disabled={this.state.toDisableBack ? 1 : 0 }
+                  onClick={this.changePeriod.bind(this, -1)}>Back</button>
                 <button id="period-plus"
-                  onClick={this.changePeriod.bind(this, 1)}
-                  disabled={this.state.toDisableNext ? 1 : 0 }>Next</button>
+                  disabled={this.state.toDisableNext ? 1 : 0 }
+                  onClick={this.changePeriod.bind(this, 1)}>Next</button>
               </div>
             </div>
           </div>
@@ -111,6 +111,9 @@ class ScoreBoard extends React.Component {
             </div>
           </div>
         </div>
+        {/* <div className>
+
+        </div> */}
       </div>
     )
   }
