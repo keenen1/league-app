@@ -7,6 +7,7 @@ class ScoreBoard extends React.Component {
       scoreA: 0,
       scoreB: 0,
       periods: ['1st', '2nd', '3rd', '4th', 'OT', '2OT', '3OT', '4OT'],
+      currentPointer: 0,
       toDisableBack: true,
       toDisableNext: false,
       currentPeriod: ''
@@ -23,6 +24,33 @@ class ScoreBoard extends React.Component {
     this.setState({
       scoreB: this.state.scoreB + num
     })
+  }
+
+  changePeriod (num) {
+    console.log('Current Pointer:', this.state.currentPointer)
+    this.setState({
+      currentPeriod: this.state.periods[this.state.currentPointer + num],
+      currentPointer: this.state.currentPointer + num,
+      toDisableBack: this.checkIfFirst(),
+      toDisableNext: this.checkIfLast()
+    })
+    console.log(this.checkIfFirst())
+  }
+
+  checkIfFirst () {
+    if (this.state.currentPointer === 0) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  checkIfLast () {
+    if (this.state.currentPointer === (this.state.periods.length - 1)) {
+      return true
+    } else {
+      return false
+    }
   }
 
   componentDidMount () {
@@ -57,14 +85,12 @@ class ScoreBoard extends React.Component {
             <div className="period-container">
               <div className="period">{this.state.currentPeriod}</div>
               <div className="period-buttons">
-                <button id="period-minus" disabled={this.state.toDisableBack
-                  ? 1
-                  : 0
-                }>Back</button>
-                <button id="period-plus" disabled={this.state.toDisableNext
-                  ? 1
-                  : 0
-                }>Next</button>
+                <button id="period-minus"
+                  onClick={this.changePeriod.bind(this, -1)}
+                  disabled={this.state.toDisableBack ? 1 : 0 }>Back</button>
+                <button id="period-plus"
+                  onClick={this.changePeriod.bind(this, 1)}
+                  disabled={this.state.toDisableNext ? 1 : 0 }>Next</button>
               </div>
             </div>
           </div>
